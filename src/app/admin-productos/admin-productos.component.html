@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="onSubmit()" #productoForm="ngForm">
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="nombre">Nombre</label>
+            <input type="text" class="form-control" required [(ngModel)]="producto.nombre" name="nombre">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Tipo</label>
+            <input type="email" class="form-control" required [(ngModel)]="producto.tipo" name="tipo">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Descripción</label>
+            <!--<input type="email" class="form-control" required [(ngModel)]="producto.descripcion" name="descripcion">-->
+            <textarea class="form-control" required [(ngModel)]="producto.descripcion" name="descripcion"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Precio de compra</label>
+            <input type="email" class="form-control" required [(ngModel)]="producto.precio_compra" name="precio_compra">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Precio de venta</label>
+            <input type="email" class="form-control" required [(ngModel)]="producto.precio_venta" name="precio_venta">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Cantidad</label>
+            <input type="email" class="form-control" required [(ngModel)]="producto.cant_disponible" name="tipo">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-12">
+            <label class="control-label" for="email">Unidad de Medida</label>
+            <input type="email" class="form-control" required [(ngModel)]="producto.uni_medida" name="uni_medida">
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" [disabled]="!productoForm.form.valid">Guardar</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
